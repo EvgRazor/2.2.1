@@ -26,4 +26,10 @@ public class UserServiceImp implements UserService {
       return userDao.listUsers();
    }
 
+   @Transactional
+   @Override
+   public List<User> listUsersCar(String name, int seria) {
+      return userDao.listUsersAuto(name, seria);
+   }
+
 }
