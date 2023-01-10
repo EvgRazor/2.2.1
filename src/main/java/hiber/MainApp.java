@@ -44,20 +44,17 @@ public class MainApp {
          System.out.println("Email = "+user.getEmail());
          System.out.println();
       }
-      System.out.println("-------------- Список юзеров-----------------------------------\n");
 
 
-      System.out.println("------------------Вывод юзера по авто и серии-------------------------------");
 
-      List<User> carList = userService.listUsersCar("Жигули", 569);
-      for (User user : carList) {
-         System.out.println("Id = "+user.getId());
-         System.out.println("First Name = "+user.getFirstName());
-         System.out.println("Last Name = "+user.getLastName());
-         System.out.println("Email = "+user.getEmail());
+      System.out.println("------------------Вывод Одного юзера по авто и серии-------------------------------");
+
+      User use=  userService.userReturn("Мерс", 333);
+         System.out.println("Id = "+use.getId());
+         System.out.println("First Name = "+use.getFirstName());
+         System.out.println("Last Name = "+use.getLastName());
+         System.out.println("Email = "+use.getEmail());
          System.out.println();
-      }
-
       context.close();
    }
 }
